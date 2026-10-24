@@ -1,0 +1,54 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #244b35;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.brand-symbol {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  transition:
+    transform 0.5s ease,
+    filter 0.4s ease;
+}
+
+.brand-word {
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -1.6px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.brand-dot {
+  color: #78a83f;
+}
+
+.brand-logo.animated:hover .brand-symbol {
+  transform: rotate(45deg) scale(1.12);
+  filter: drop-shadow(0 0 7px #a5d66c80);
+}
+
+.brand-logo.animated:hover .brand-dot {
+  color: #244b35;
+}
+
+.brand-logo:focus-visible {
+  outline: 2px solid #78a83f;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-symbol {
+    transition: none;
+  }
+
+  .brand-logo.animated:hover .brand-symbol {
+    transform: none;
+  }
+}
